@@ -9,11 +9,10 @@ ctx := context.Background()
 srv := speedtester.New()
 
 // Run speed test on fast.com
-res, _ := srv.RunSpeedTest(ctx, netspeed.Fast)
+res, _ := srv.RunSpeedTest(ctx, speedtester.Fast)
 fmt.Println(res.Download, res.Upload)
 
 // Run speed test on speedtest.net
-res, _ = srv.RunSpeedTest(ctx, netspeed.Speedtest)
+res, _ = srv.RunSpeedTest(ctx, speedtester.Speedtest)
 fmt.Println(res.Download, res.Upload)
 ```
-
